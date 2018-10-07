@@ -43,6 +43,5 @@ module.exports = function solveSudoku(matrix) {
       }
       return result;
     }
-    return !getter(0) ? 'These are not the numbers you-re looking for...' :
-      cluster(solvedSukodu);
-  };
+    return !getter(0) ? 'These are not the numbers you-re looking for...' : cluster(solvedSukodu);
+  }
