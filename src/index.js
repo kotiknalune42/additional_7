@@ -1,8 +1,8 @@
 module.exports = function solveSudoku(matrix) {
-    const solvedSukodu = [], len = matrix.length;
+    let solvedSukodu = [], len = matrix.length;
 
-    for (horizontal = 0; horizontal < len; horizontal++) {
-      for (vertical = 0; vertical < len; vertical++) {
+    for (let horizontal = 0; horizontal < len; horizontal++) {
+      for (let vertical = 0; vertical < len; vertical++) {
         solvedSukodu.push(matrix[horizontal][vertical]);
       }
     }
@@ -37,12 +37,12 @@ module.exports = function solveSudoku(matrix) {
     }
   
     function cluster(array) {
-      const result = [];
-      for (let i = 0; i < arrray.length; i += 9) {
-        result.push(array.slice(i, i + 9));
+      let result = [];
+      for (let i = 0; i < array.length; i += 9) {
+      		result.push(array.slice(i, i + 9));
       }
       return result;
     }
     return !getter(0) ? 'These are not the numbers you-re looking for...' :
       cluster(solvedSukodu);
-  }
+  };
